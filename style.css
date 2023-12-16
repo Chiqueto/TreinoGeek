@@ -38,7 +38,7 @@ body * {
 }
 
 #container {
-    width: 100%px;
+    width: 100%;
     max-width: 560px;
     margin: 56px auto 0px;
     padding: 0 24px;
@@ -135,6 +135,65 @@ ul li a {
     font-weight: 500;
 
     transition: background 0.2s;
+}
+
+.produtos{
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 8px 8px;
+    flex-wrap: wrap;
+    
+}
+
+.produtos img {
+    border: 2px solid var(--surface-color-hover);
+    border-radius: 8px;
+    background: var(--surface-color-hover);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    margin: 0 5px;
+    transition: background 0.2s;
+}
+.info-produto {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0px; /* ou outro valor conforme necessário para ajustar a posição */
+}
+
+.descricao {
+    font-size: medium;
+    margin-top: 5px; /* ou outro valor conforme necessário para ajustar a posição */
+    border: 2px solid var(--surface-color-hover);
+    border-radius: 4px;
+    background: var(--surface-color-hover);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: background 0.2s;
+}
+.nome{
+    text-align: center;
+    flex-grow: 1;
+
+    font-size: 25px;
+    
+    border: 4px solid var(--surface-color-hover);
+    border-radius: 6px;
+    background: var(--surface-color-hover);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    margin-bottom: 10px;
+    transition: background 0.2s;
+}
+
+.produtos:hover > img{
+    background: var(--surface-color);
+}
+
+.produtos:hover > div > p{
+    background: var(--surface-color);
 }
 
 ul li a:hover{
