@@ -4,32 +4,41 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --text-color: white;
-    --bg-url:url(./assets/bg-mobile.jpg);
-    --stroke-color:rgba(255, 255, 255, 0.5);
-    --surface-color: rgba(255, 255, 255, 0.1);
-    --surface-color-hover:rgba(0, 0, 0, 0.02);
-    --highlight-color:rgba(255, 255, 255, 0.2);
+    --back-url: url(./assets/bg-mobile.jpg);/*background*/
+    --stroke-color: rgba(255, 255, 255, 0.5); /*bordas*/
+    --surface-color: rgba(255,255,255, 0.05); /*cor do fundo*/
+    --surface-color-hover: rgba(0,0,0, 0.02); /*ao passar o mouse*/
+    --highlight-color: rgba(255, 255, 255, 0.2);
     --switch-bg-url: url(./assets/moon-stars.svg);
+    --surface-color-opt: rgb(35, 35, 35);
+
+
 }
 
-.light{
-    --text-color: black;
-    --bg-url:url(./assets/bg-mobile-light.jpg);
-    --stroke-color:rgba(0, 0, 0, 0.5);
-    --surface-color:rgba(0, 0, 0, 0.05);
-    --surface-color-hover:rgba(255, 255, 255, 0.5);
-    --highlight-color:rgba(0, 0, 0, 0.1);
+
+
+.light {
+    --text-color: black; /*Variavel p/ cor do texto*/
+    --back-url: url(assets/bg-mobile-light.jpg); /*variavel para cor do fundo*/
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0,0,0, 0.05);
+    --surface-color-hover: rgba(255,255,255, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(./assets/sun.svg);
+    --surface-color-opt: rgb(220, 220, 220);
 
 }
 
 
 body {
-    background: var(--bg-url) no-repeat 
-    top center/cover;
-    height: 100vh;
+    background: var(--back-url);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    min-width: 300px;
+    margin: auto;
 }
 
 body * {
@@ -137,16 +146,19 @@ ul li a {
     transition: background 0.2s;
 }
 
+
 .produtos{
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
     padding: 8px 8px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     
 }
 
 .produtos img {
+    max-width: 200px;
+    width: 50%;
     border: 2px solid var(--surface-color-hover);
     border-radius: 8px;
     background: var(--surface-color-hover);
@@ -154,9 +166,17 @@ ul li a {
     -webkit-backdrop-filter: blur(4px);
     margin: 0 5px;
     transition: background 0.2s;
+    
+}
+@media (max-width:488px){
+    .info-produto > .nome{
+        font-size: 20px;
+    }
 }
 .info-produto {
+    width: 40%;
     flex-grow: 1;
+    flex-shrink: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
