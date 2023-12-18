@@ -41,15 +41,44 @@ body {
     margin: auto;
 }
 
+@media (max-width: 420px){
+    #entidade{
+        font-size: 10px;
+    }
+}
+@media (max-width: 350px){
+    #pontfinal{
+        font-size: 14px;
+    }
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+#container {
+    /*border: 1px solid red;*/
+    max-width: 500px;
+    min-width: 300px;
+    /*height: 712px;*/
+    margin: 56px auto 0px;
+    text-align: center;
+    padding: 0 24px;
+}
+
 body * {
     font-family: 'inter', sans-serif;
     color: var(--text-color);
 }
 
 #container {
-    width: 100%;
-    max-width: 560px;
+    /*border: 1px solid red;*/
+    max-width: 500px;
+    min-width: 300px;
+    /*height: 712px;*/
     margin: 56px auto 0px;
+    text-align: center;
     padding: 0 24px;
 }
 
@@ -253,11 +282,11 @@ footer{
 /* media queries */
 @media (min-width: 700px) {
     :root{
-        --bg-url: url(./assets/bg-desktop.jpg)
+        --back-url: url(./assets/bg-desktop.jpg)
     }
 
     .light{
-        --bg-url: url(./assets/bg-desktop-light.jpg)
+        --back-url: url(./assets/bg-desktop-light.jpg)
     }
 }
 
